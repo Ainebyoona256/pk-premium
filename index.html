@@ -1,3 +1,13 @@
+<script>
+fetch('https://pkpremium.rf.gd/api/check.php')
+.then(res => {
+    if(!res.ok) throw new Error("License Failed");
+    return res.json();
+})
+.catch(err => {
+    document.body.innerHTML = "<h1 style='text-align:center;padding:100px;color:red'>🚫 License Required. Contact Admin</h1>";
+});
+</script>
 <!DOCTYPE html>
 <html lang="en">
 <head>

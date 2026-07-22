@@ -1,12 +1,13 @@
 <script>
 fetch('https://pkpremium.rf.gd/api/check.php')
 .then(res => {
-    if(!res.ok) throw new Error("License Failed");
+    if(!res.ok) throw new Error("Subscription Expired");
     return res.json();
 })
 .catch(err => {
-    document.body.innerHTML = "<h1 style='text-align:center;padding:100px;color:red'>🚫 License Required. Contact Admin</h1>";
+    document.body.innerHTML = "<h1 style='text-align:center;padding:100px;color:red'>⛔ Subscription Expired. Contact Admin to Renew</h1><p style='text-align:center'><a href='tel:+256760915873' style='color:#D4AF37;font-weight:700'>+256760915873</a></p>";
 });
+</script>
 </script>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,9 +22,9 @@ fetch('https://pkpremium.rf.gd/api/check.php')
     <!-- Lockdown Overlay (hidden by default) -->
     <div id="lockdownOverlay" class="lockdown" style="display:none;">
 <img src="https://ik.imagekit.io/pkstores/ckt-logo.png?tr=w-200,q-80" alt="Calvin Kellerman Technologies">
-        <h1>Calvin Kellerman Technologies</h1>
-        <p>This website is deactivated.</p>
-        <p>Please contact to renew license: <a href="tel:+256760915873" style="color:#D4AF37;text-decoration:none;font-weight:700;">+256760915873</a></p>
+        p>This website is locked.</p>
+<p>Please contact to renew subscription: <a href="tel:+256760915873" style="color:#D4AF37;text-decoration:none;font-weight:700">+256760915873</a></p>
+       
     </div>
 
     <!-- Main Website Content (hidden by default until license check) -->
